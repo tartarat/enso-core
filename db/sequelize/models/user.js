@@ -21,6 +21,7 @@ function makeModel (sequelize){
     updatedAt:{ type:DataTypes.DATE },
     addedBy:{ type:DataTypes.INTEGER },
     updatedBy:{ type:DataTypes.INTEGER },
+    userType:{ type:DataTypes.INTEGER },
     mobileNo:{ type:DataTypes.STRING },
     isDeleted:{ type:DataTypes.BOOLEAN }
   }

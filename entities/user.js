@@ -11,6 +11,7 @@ module.exports = (user) => {
     updatedAt: user.updatedAt,
     addedBy: user.addedBy,
     updatedBy: user.updatedBy,
+    userType: user.userType,
     mobileNo: user.mobileNo,
     isDeleted: user.isDeleted,
   };

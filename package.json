@@ -1,5 +1,5 @@
 {
-  "name": "enso-clean",
+  "name": "enso-core",
   "version": "0.0.1",
   "private": true,
   "scripts": {

@@ -12,6 +12,7 @@ const createSchema = joi.object({
   email: joi.string().allow(null).allow(''),
   name: joi.string().allow(null).allow(''),
   isActive: joi.boolean(),
+  userType: joi.number().integer().allow(0),
   mobileNo: joi.string().allow(null).allow(''),
   isDeleted: joi.boolean()
 }).unknown(true);
@@ -22,6 +23,7 @@ const updateSchema = joi.object({
   email: joi.string().allow(null).allow(''),
   name: joi.string().allow(null).allow(''),
   isActive: joi.boolean(),
+  userType: joi.number().integer().allow(0),
   mobileNo: joi.string().allow(null).allow(''),
   isDeleted: joi.boolean(),
   id: joi.number().integer()
@@ -36,6 +38,7 @@ let filterValidationSchema = joi.object({
     email: joi.alternatives().try(joi.array().items(),joi.string(),joi.object()),
     name: joi.alternatives().try(joi.array().items(),joi.string(),joi.object()),
     isActive: joi.alternatives().try(joi.array().items(),joi.boolean(),joi.object()),
+    userType: joi.alternatives().try(joi.array().items(),joi.number().integer(),joi.object()),
     mobileNo: joi.alternatives().try(joi.array().items(),joi.string(),joi.object()),
     isDeleted: joi.alternatives().try(joi.array().items(),joi.boolean(),joi.object()),
     id: joi.any()
